@@ -1,0 +1,19 @@
+{
+  "name": "node.microservice.architecture",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "concurrently \"npm run start:api\" \"npm run start:auth\" \"npm run start:master\" \"npm run start:notification\"",
+    "start:api": "node services/api-gateway/server.js",
+    "start:auth": "node services/authentication-module/server.js",
+    "start:master": "node services/master-module/server.js",
+    "start:notification": "node services/notification-module/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
